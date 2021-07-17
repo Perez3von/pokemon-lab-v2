@@ -1,1 +1,133 @@
-/* add home page styles here */
+
+header,#header-content, .main-section, #character-content, #pokemon-content,#sub-section,#last-seen-pokemon{
+    display: flex;
+    flex-direction: row;
+   
+    
+}
+header{
+    font-size: 30px;
+    background-color: aliceblue;
+     justify-content: space-evenly;
+
+}
+a{
+   margin-left: 100px;
+}
+img{
+    margin-top:20px
+}
+
+#character-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#character-section *{
+    margin-top: 5px;
+}
+
+
+#catch-button-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.box{
+ border-style: solid;
+    border-width: 2px;
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius:20px;
+    opacity: 0.9;
+   
+
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+input[type="radio"]:not(:checked) + img:hover{
+    opacity: 50%;
+   
+}
+
+input[type="radio"] {
+    display: none;
+  }
+
+input[type="radio"]:checked + img{
+    
+    border-radius: 50%;
+    background-image: url('../assets/pokeball.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+
+  }
+
+.pokemon{
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+  }
+  
+  #catch{
+      margin-top: 80px;
+    height: 50px;
+    width: 50px;
+  }
+  #catch:hover{
+      height: 60px;
+      width: 60px;
+    
+  }
+ 
+#bag-logo{
+      height:50px;
+      width: 50px;;
+      margin-top: 50%;
+      border-radius: 30%;
+  }
+main{
+    flex-wrap: wrap;
+}
+
+body{
+    background-image: url('../assets/mountain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Encode Sans SC;
+    font-weight: bold;
+}
+.main-section{
+    margin-top: 50px;
+    margin-left: 25%;
+}
+#sub-section{
+
+    display: flex;
+margin-top:  10px;
+margin-left: 25%;
+    
+}
+#character-content{
+
+    margin-right: 20px;
+}
+#last-seen-content{
+    margin-right: 240px;
+    flex-wrap: wrap;
+}
+
+#pokemon-content{
+    overflow-wrap: break-word;
+    margin-right: 50%;
+}
+span{
+    margin:10px;
+}
+

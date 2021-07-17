@@ -9,62 +9,68 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
+        <div id="header-content">
+            <h3>Welcome, go on and catch some pokemon!</h3>
+            <a href="./bag/index.html">
+                    <img src="./assets/bag.png" alt="bag logo" id="bag-logo">
+            </a>
         </div>
+       
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+            <div id="character-content" class="box">
+                <div id="character-section">
+                    <div class="underline">Choose a pokemon</div>
+                    <div id="my-character"></div>
+                    <label for="charater-select">Choose a character:</label>
+                    <select name="character" id="character-select">
+                        <option value="ash.png">Ash</option>
+                        <option value="ashley.jpg">Ashley</option>
+                        <option value="red.jpg">Red</option>
+                        <option value="roxy.png">Roxy</option>
+                    </select>
+                </div>
+                <div id="catch-section">
+                    <div id="catch-button-section" >
+                        <img id="catch" src="./assets/pokeball.png"></img>
+                        <span id="catch-message">Catch</span>
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+            <div id="pokemon-content" class="box">
+                <label id="pokemon-one" class="pokemon"></label>
+                <label id="pokemon-two" class="pokemon"></label>
+                <label id="pokemon-three" class="pokemon"></label>
+            </div>
         </section>
+        <section id="sub-section">
+            <div id="last-seen-content" class="box">
+                <span id="last-seen-message" class="underline">Last Seen</span>
+                <div id="last-seen-pokemon">
+                    <div id="last-seen-pokemon-one" class="pokemon"></div>
+                    <div id="last-seen-pokemon-two" class="pokemon"></div>
+                    <div id="last-seen-pokemon-three" class="pokemon"></div>
+                </div>
+            </div>
+            <div id="last-caught-content" class="box" >
+                <span id="last-caught-message" class="underline">Last Caught</span>
+                <div id="last-caught-pokemon" class="pokemon"></div>
+            </div>
+            
+        </section>
+
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        
     </footer>
 
     <script type="module" src="./app.js"></script>
