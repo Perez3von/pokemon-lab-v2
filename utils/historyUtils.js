@@ -2,12 +2,21 @@ export const LAST = 'Last Caught';
 export const ALL_HISTORY = 'History';
 export const TRACKER = 'Plays';
 export const CHARACTER = 'Character';
-
+export const SEEN = 'Seen';
+import { pokemon_data } from '../pokemon data/pokemondata.js';
+import { searchPokeDex } from './bagUtils.js';
 
 export function getLastCaught(){
 
     let last_caught = localStorage.getItem(LAST) || '[]';
     const data = JSON.parse(last_caught);
+    return data;
+}
+
+export function getSeen(){
+
+    let s = localStorage.getItem(SEEN) || '[]';
+    const data = JSON.parse(s);
     return data;
 }
 export function getTracker(){
@@ -62,12 +71,10 @@ export function addToHistory(arr){
         current.push(i);
     }
 
-
     if (past.length === 0){
 
         history.push(current);
         localStorage.setItem(ALL_HISTORY, JSON.stringify(history));
-
     }
     else {
         
@@ -91,6 +98,33 @@ export function setCharacter(name){
     localStorage.setItem(CHARACTER, name);
 }
 
+
+export function addSeen(id){
+
+    let mySeen = getSeen();
+    let pokemonn;
+    if (mySeen.length > 0){
+
+        for (let j of mySeen){
+
+            if (j['species_id'] === id){
+                pokemonn = j;
+            }
+        }
+
+    }
+   
+    if (pokemonn){
+        pokemonn.seen += 1;
+    }
+    else {
+
+        let newPokemon = searchPokeDex(pokemon_data, id);
+        mySeen.push((newPokemon));
+    }
+    localStorage.setItem(SEEN, JSON.stringify(mySeen));
+
+}
 
 
 

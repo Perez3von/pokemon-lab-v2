@@ -22,7 +22,6 @@ export function searchBag(bag, id){
     }
 }
 
-
 export function searchPokeDex(data, id){
 
     let pokedex = data;
@@ -30,20 +29,24 @@ export function searchPokeDex(data, id){
     for (let i = 0; i < pokedex.length; i++){
 
         if (pokedex[i].species_id === my_id){
-            
-            return pokedex[i];
+            let pokemon = {
+                'pokemon': pokedex[i]['pokemon'],
+                'species_id':pokedex[i]['species_id'], 
+                'url_image': pokedex[i]['url_image'],
+                seen: 1
+            };
+           
+            return pokemon;
         }
     }
 }
 
 export function addToBag(id){
 
-    let bag = getBag(); //arr of obj
-
-    let pokemon = searchBag(bag, id); //obj
+    let bag = getBag();
+    let pokemon = searchBag(bag, id);
     let poke_from_dex = searchPokeDex(pokemon_data, id);
     
-
     if (pokemon){
         
         pokemon.caught += 1;

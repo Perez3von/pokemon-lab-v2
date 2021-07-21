@@ -42,7 +42,6 @@ img{
     background-color: aliceblue;
     border-radius:20px;
     opacity: 0.9;
-   
 
 }
 
@@ -110,8 +109,10 @@ body{
 #sub-section{
 
     display: flex;
+    flex-direction: column;
 margin-top:  10px;
 margin-left: 25%;
+
     
 }
 #character-content{
@@ -119,13 +120,20 @@ margin-left: 25%;
     margin-right: 20px;
 }
 #last-seen-content{
-    margin-right: 240px;
+    margin-top: 10px;;
     flex-wrap: wrap;
+    width: 45%;
+    
+}
+#last-caught-content{
+    width: 20%;
+    margin-top: 20px;;
 }
 
 #pokemon-content{
     overflow-wrap: break-word;
     margin-right: 50%;
+    height: 50%;
 }
 span{
     margin:10px;

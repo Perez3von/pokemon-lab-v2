@@ -1,3 +1,5 @@
+import { searchPokeDex } from './bagUtils.js';
+
 export function randomNum(arr){
 
     let data_size = arr.length - 1;
@@ -17,11 +19,10 @@ export function getPokemon(arr){
         num2 = randomNum(arr);
         num3 = randomNum(arr);
     }
-    
-    array_of_obj_pokemon.push(arr[num1]);
-    array_of_obj_pokemon.push(arr[num2]);
-    array_of_obj_pokemon.push(arr[num3]);
 
+    array_of_obj_pokemon.push(searchPokeDex(arr, num1));
+    array_of_obj_pokemon.push(searchPokeDex(arr, num2));
+    array_of_obj_pokemon.push(searchPokeDex(arr, num3));    
     return array_of_obj_pokemon; 
 }
 
