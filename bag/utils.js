@@ -1,10 +1,10 @@
-import { getSeen } from "../utils/historyUtils.js";
+import { getSeen } from '../utils/historyUtils.js';
 
 export function renderPokemonTable(ele, arrObj){
 
 
     for (let i = 0; i < arrObj.length; i++){
-        let seenArr =getSeen();
+        let seenArr = getSeen();
         let seenn;
         let img = document.createElement('img');
         let pokemon_name = document.createElement('span');
@@ -17,8 +17,8 @@ export function renderPokemonTable(ele, arrObj){
         pokemon_name.textContent = arrObj[i]['pokemon'].toUpperCase();
         
 
-        for(let j = 0; j < seenArr.length; j++){
-            if(arrObj[i].id === seenArr[j]['species_id']){
+        for (let j = 0; j < seenArr.length; j++){
+            if (arrObj[i].id === seenArr[j]['species_id']){
                 seenn = seenArr[j].seen;
             }
         }
